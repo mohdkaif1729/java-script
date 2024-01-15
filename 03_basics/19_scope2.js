@@ -13,9 +13,3 @@ const two = function(num) {
     return num + 2
 }
 
-
-
-
-
-
-
