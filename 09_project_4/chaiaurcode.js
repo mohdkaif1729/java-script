@@ -1,13 +1,13 @@
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
-const submit = document.querySelector('#subt');
-const userInput = document.querySelector('#guessField');
-const guessSlot = document.querySelector('.guesses');
-const remaining = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
-const startOver = document.querySelector('.resultParas');
+let submit = document.querySelector('#subt');
+let userInput = document.querySelector('#guessField');
+let guessSlot = document.querySelector('.guesses');
+let remaining = document.querySelector('.lastResult');
+let lowOrHi = document.querySelector('.lowOrHi');
+let startOver = document.querySelector('.resultParas');
 
-const p = document.createElement('p');
+let p = document.createElement('p');
 
 let prevGUess = [];
 let numGuess = 1;
@@ -17,7 +17,7 @@ let playGame = true;
 if (playGame) {
   submit.addEventListener('click', function (e) {
     e.preventDefault();
-    const guess = parseInt(userInput.value);
+    let guess = parseInt(userInput.value);
     console.log(guess);
     validateGuess(guess);
   });
@@ -76,7 +76,7 @@ function endGame() {
 }
 
 function newGame(guess) {
-  const newGameButton = document.querySelector('#newGame');
+  let newGameButton = document.querySelector('#newGame');
   newGameButton.addEventListener('click', function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
     prevGUess = [];
