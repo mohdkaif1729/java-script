@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                color: #ffffff;
+            }
+            body {
+                background-color: #414141;
+            }
+            #container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+                gap: 20px;
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 155px;
+                width: 155px;
+                border: 2px solid #ffffff;
+                background-color: #212121;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="box" id="photoshop">photoshop</div>
+            <div class="box" id="japan">japan</div>
+            <div class="box" id="river">river</div>
+            <div class="box" id="owl">owl</div>
+            <div class="box" id="prayer">prayer</div>
+        </div>
+    </body>
+
+    <script>
+        // document.getElementById("owl").onclick = function () {
+        //     alert("owl clicked");
+        // };
+
+        //  type, timeStamp, preventDefault, target,
+        // toElement, srcElement, currentTarget, clientX,
+        // clientY, screenX, screenY, altkey, ctrlkey,
+        // shiftkey, keycode
+
+        // document.getElementById("owl").addEventListener(
+        //     "click",
+        //     function (e) {
+        //         alert("click owl again");
+        //     },
+        //     false // default false, event propogation
+        // 1.event bubulling (botton to top),
+        //     // 2.event capturing (top to bottom)
+        // );
+
+        // document.getElementById("container").addEventListener(
+        //     "click",
+        //     function (e) {
+        //         e.stopPropagation();
+        //         alert("click on container");
+        //     },
+        //     false
+        // );
+
+        // document.getElementById("container").addEventListener(
+        //     "click",
+        //     function (e) {
+        //         e.preventDefault(); // use in form mostly
+        //         alert("click on container");
+        //     },
+        //     false
+        // );
+
+        document
+            .querySelector("#container")
+            .addEventListener("click", function (e) {
+                console.log(e.target);
+                let removeIt = e.target;
+                removeIt.remove();
+                // let removeIt = e.target.parentNode
+            }, false);
+
+            // removeIt.parentNode.removeChild(removeIt)
+    </script>
+</html>
