@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                background-color: #414141;
+                width: 100vw;
+
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card {
+                height: 400px;
+                width: 310px;
+                border-radius: 10px;
+                background-color: red;
+            }
+
+            .btn {
+                height: 40px;
+                width: 100px;
+                font-size: 15px;
+                border-radius: 30px;
+                border: none;
+                margin: 20px;
+            }
+            .btn:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+            .userImg {
+                border-radius: 10px;
+                object-fit: cover;
+                height: 400px;
+                width: 310px;
+            }
+            .followers {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <button class="btn">User Info</button>
+            <div class="card">
+                <img class="userImg" src="" alt="img" />
+            </div>
+            <h2 class="followers"></h2>
+        </div>
+
+        <script src="32_fetchApi.js"></script>
+    </body>
+</html>
